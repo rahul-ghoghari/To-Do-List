@@ -1,0 +1,134 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#root {
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* login page start */
+.loginForm > .passInput > div > fieldset,
+.loginForm > .emailInput > div > fieldset {
+  border-color: #fff !important;
+}
+
+.loginForm > .passInput > div > input,
+.loginForm > .emailInput > div > input {
+  color: #fff !important;
+}
+
+.loginForm > .emailInput > label,
+.loginForm > .passInput > label {
+  color: #fff !important;
+}
+a {
+  text-decoration: none !important;
+  color: #fff;
+}
+a::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #fff;
+  width: 100%;
+  margin-bottom: 20px;
+  transform: scaleX(0);
+  transition: 0.5s;
+}
+a:hover::after {
+  transform: scaleX(1);
+}
+
+.signUpLink,
+.SignInLink {
+  justify-content: center;
+}
+/* login page end */
+
+/* register page start */
+.registerForm > .passInput > div > fieldset,
+.registerForm > .firstNameInput > div > fieldset,
+.registerForm > .lastNameInput > div > fieldset,
+.registerForm > .emailInput > div > fieldset {
+  border-color: #fff !important;
+}
+
+.registerForm > .passInput > div > input,
+.registerForm > .firstNameInput > div > input,
+.registerForm > .lastNameInput > div > input,
+.registerForm > .emailInput > div > input {
+  color: #fff !important;
+}
+
+.registerForm > .emailInput > label,
+.registerForm > .lastNameInput > label,
+.registerForm > .firstNameInput > label,
+.registerForm > .passInput > label {
+  color: #fff;
+}
+
+.registerForm > .Mui-focused > fieldset {
+  border-color: #1976d2;
+}
+/* register page end */
+/* manageList start */
+.listTable,
+.listTable thead tr th {
+  background-color: #080808;
+}
+.listTable thead tr th,
+.listTable tbody tr td {
+  border-color: #fff;
+  color: #fff;
+}
+
+.tablePage > div {
+  background-color: #080808;
+  color: #fff;
+}
+
+.tablePage > div > .MuiTablePagination-actions > .Mui-disabled {
+  color: rgb(183 165 165 / 26%);
+}
+
+.color-white {
+  color: #fff !important;
+}
+/* managelist end */
