@@ -6,8 +6,9 @@ const mongoose = require("mongoose");
 mongo = require("mongodb");
 const List = require("./db/List");
 const User = require("./db/User");
+require('dotenv').config()
 mongoose
-  .connect("mongodb://0.0.0.0:27017/ToDoList", {
+  .connect("mongodb+srv://"+process.env.user+":"+process.env.pass+"@todolist.jnovplg.mongodb.net/?retryWrites=true&w=majority&appName=todoList", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
