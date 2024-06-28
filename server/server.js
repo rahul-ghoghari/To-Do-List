@@ -30,7 +30,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.json());
 app.use(express.static("public"));
-
+app.get("/", function (req, res) {
+  res.end("Hello World");
+});
 app.get("/getData/:email", function (req, res) {
   const email = req.params.email;
   console.log(email);
