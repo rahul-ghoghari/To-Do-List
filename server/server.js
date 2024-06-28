@@ -7,10 +7,16 @@ mongo = require("mongodb");
 const List = require("./db/List");
 const User = require("./db/User");
 require("dotenv").config();
+const user = process.env.user;
+const pass = process.env.pass;
 
 mongoose
   .connect(
-    "mongodb+srv://rahul13:v8S5ruLNLSVV2RHU@todolist.jnovplg.mongodb.net/?retryWrites=true&w=majority&appName=todoList",
+    "mongodb+srv://" +
+      user +
+      ":" +
+      pass +
+      "@todolist.jnovplg.mongodb.net/?retryWrites=true&w=majority&appName=todoList",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
