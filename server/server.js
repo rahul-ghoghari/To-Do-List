@@ -5,8 +5,8 @@ app.use(cors());
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 mongo = require("mongodb");
-const List = require("./db/List");
-const User = require("./db/User");
+const List = require("../db/List");
+const User = require("../db/User");
 require('dotenv').config()
 mongoose
   .connect("mongodb+srv://"+process.env.user+":"+process.env.pass+"@todolist.jnovplg.mongodb.net/?appName=todoList", {
