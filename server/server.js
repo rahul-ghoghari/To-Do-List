@@ -33,7 +33,10 @@ app.use(express.json());
 app.use(express.static("public"));
 app.get("/", function (req, res) {
   res.status(204);
-  res.end("Hello World");
+  
+});
+app.get("/test", function (req, res) {
+  res.send({"status":"Success"});
   
 });
 app.get('/favicon.ico', (req, res) => {
