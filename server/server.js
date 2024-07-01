@@ -34,6 +34,9 @@ app.use(express.static("public"));
 app.get("/", function (req, res) {
   res.send("Hello World");
 });
+app.get('/favicon.ico', (req, res) => {
+  res.status(204);
+});
 app.get("/getData/:email", function (req, res) {
   const email = req.params.email;
   console.log(email);
