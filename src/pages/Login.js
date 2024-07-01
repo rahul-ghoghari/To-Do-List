@@ -18,8 +18,8 @@ import { useOutletContext } from "react-router-dom";
 
 export default function Login() {
   const { login, setLogin } = useGlobalState();
-  const SECRET_KEY = process.env.SECRET;
-  const baseUrl = process.env.SERVER;
+  const SECRET_KEY = process.env.REACT_APP_SECRET;
+  const baseUrl = process.env.REACT_APP_SERVER;
   const navigate = useNavigate();
   const checkLogin = () => {
     const email = decryptData("email");

@@ -9,14 +9,13 @@ const User = require("./db/User");
 require("dotenv").config();
 const user = process.env.user;
 const pass = process.env.pass;
-
 mongoose
   .connect(
     "mongodb+srv://" +
       user +
       ":" +
       pass +
-      "@todolist.jnovplg.mongodb.net/?retryWrites=true&w=majority&appName=todoList",
+      "@cluster0.rbhhfar.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
