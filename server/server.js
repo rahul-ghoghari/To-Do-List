@@ -148,3 +148,4 @@ app.post("/AddUser", function (req, res) {
 app.listen(8090, () => {
   console.log("Server running on localhost:8090");
 });
+module.exports = app;
