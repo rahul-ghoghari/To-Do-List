@@ -31,8 +31,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.json());
 app.use(express.static("public"));
-app.get("", function (req, res) {
-  res.send("Hello World");
+app.get("/", function (req, res) {
+  res.status(204);
+  res.end("Hello World");
+  
 });
 app.get('/favicon.ico', (req, res) => {
   res.status(204);
