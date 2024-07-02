@@ -5,18 +5,13 @@ app.use(cors());
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 mongo = require("mongodb");
-const List = require("../db/List");
-const User = require("../db/User");
+const List = require("./db/List");
+const User = require("./db/User");
 require('dotenv').config()
 mongoose
   .connect("mongodb+srv://"+process.env.user+":"+process.env.pass+"@todolist.jnovplg.mongodb.net/?appName=todoList", {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
-    serverApi: {
-      version: ServerApiVersion.v1,
-      strict: true,
-      deprecationErrors: true,
-    }
+    useUnifiedTopology: true
   })
   .then((res) => console.log("Connected to DB"))
   .catch((err) => console.log("Err:" + err));
@@ -148,4 +143,3 @@ app.post("/AddUser", function (req, res) {
 app.listen(8090, () => {
   console.log("Server running on localhost:8090");
 });
-module.exports = app;
